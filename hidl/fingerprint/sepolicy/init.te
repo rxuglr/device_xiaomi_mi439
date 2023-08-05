@@ -1,2 +1,0 @@
-allow init hal_fingerprint_default:process ptrace;
-allow init vendor_configs_file:dir mounton;

@@ -1,4 +1,6 @@
-# device tree for Xioami SDM439 
+# device tree for Redmi 7A
+
+Don't use this branch, don't ask why I made it, don't try to understand the condition of my pine
 
 ```
 #

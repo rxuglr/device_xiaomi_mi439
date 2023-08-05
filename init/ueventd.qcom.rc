@@ -57,7 +57,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/dpl_ctrl             0660   usb        usb
 /dev/ipa_odl_ctl          0660   radio      radio
 /dev/ipa_adpl             0660   system     oem_2905
-/dev/synx_device          0660   root       camera
 /dev/hab                  0666   system     system
 /dev/hgsl                 0666   system     system
 /dev/iio:device*          0664   system     system
@@ -131,10 +130,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/mhi_*_pipe_32        0640   radio      radio
 /dev/at_usb0              0640   radio      radio
 /dev/at_mdm0              0640   radio      radio
-/dev/video*               0660   system     camera
-/dev/cvp*                 0660   system     camera
-/dev/media*               0660   system     camera
-/dev/v4l-subdev*          0660   system     camera
 /dev/qseecom              0660   system     drmrpc
 /dev/qce                  0660   system     drmrpc
 /dev/smcinvoke            0660   system     drmrpc
@@ -153,11 +148,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/spdaemon_ssr         0660   system     system
 /dev/spu_hal_ssr          0660   system     system
 /dev/iuicc*               0660   system     system
-/dev/gemini0              0660   system     camera
-/dev/jpeg0                0660   system     camera
-/dev/jpeg1                0660   system     camera
-/dev/jpeg2                0660   system     camera
-/dev/jpeg3                0660   system     camera
 /dev/adsprpc-smd          0664   system     system
 /dev/adsprpc-smd-secure   0644   system     system
 /dev/system_health_monitor 0644  radio      system
@@ -187,9 +177,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /sys/devices/platform/soc/17a10040.qcom,wcn6750/net/wlan*/queues/rx-* rps_cpus    0660   system     system
 /dev/spidev0.0            0660   system     audio
 /dev/i2c-7                0660   system     audio
-/dev/msm_camera/*         0660   system     camera
-/dev/gemini/              0660   system     camera
-/dev/mercury0             0660   system     camera
 /dev/msm_vidc_reg         0660   system     audio
 /dev/msm_vidc_dec         0660   system     audio
 /dev/msm_vidc_dec_sec     0660   system     audio
@@ -223,7 +210,6 @@ firmware_directories /vendor/firmware_mnt/image/
 /dev/msm_audio_cal        0660   system     audio
 /dev/msm_hweffects        0660   system     audio
 /dev/msm_cad              0660   system     audio
-/dev/msm_fm               0660   system     audio
 /dev/msm_mvs              0660   system     audio
 /dev/msm_pcm_lp_dec       0660   system     audio
 /dev/msm_preproc_ctl      0660   system     audio

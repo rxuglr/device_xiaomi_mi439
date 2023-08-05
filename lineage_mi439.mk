@@ -14,13 +14,13 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
 
 # Inherit from mi439 device configuration.
 $(call inherit-product, device/xiaomi/mi439/device.mk)
 
 # Inherit from common AOSP configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_tablet_wifionly.mk)
 
 #Rising flags
 RISING_DEVICE := mi439
@@ -45,10 +45,13 @@ TARGET_EXCLUDES_AUDIOFX := true
 
 #Gapps
 WITH_GMS := true
-TARGET_USE_GOOGLE_TELEPHONY := true
 TARGET_CORE_GMS := true
 TARGET_CORE_GMS_EXTRAS := true
 $(call inherit-product-if-exists, vendor/gms/produtcs/gms.mk)
+
+# Enable support of one-handed mode
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.support_one_handed_mode=true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 

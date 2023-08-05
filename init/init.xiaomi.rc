@@ -20,23 +20,6 @@ service vendor.baseband-sh /vendor/bin/init.baseband.sh
     oneshot
     disabled
 
-# Camera
-on post-fs-data
-    mkdir /data/vendor/qcam 0770 camera camera
-
-on property:init.svc.vendor.qcamerasvr=running
-    exec /bin/sleep 1s
-    restart vendor.camera-provider-2-4
-
-# FM
-on property:hw.fm.init=*
-    write /sys/module/radio_iris_transport/parameters/fmsmd_set ${hw.fm.init}
-
-# RIL
-on boot
-    enable vendor.qcrild
-    enable vendor.qcrild2
-
 # Subsystem Restart
 on init
     # Setup all the sub-system as related
