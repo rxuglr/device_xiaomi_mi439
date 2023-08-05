@@ -19,4 +19,6 @@ void set_variant_props(const variant_info_t variant) {
         property_override("ro.bootimage.build.fingerprint", variant.build_fingerprint);
         property_override("ro.build.description", fingerprint_to_description(variant.build_fingerprint));
     }
+    property_override("ro.rising.chipset", "Snapdragon 439");
+    property_override("ro.rising.maintainer", "rxuglr");
 }

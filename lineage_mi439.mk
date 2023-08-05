@@ -20,16 +20,35 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/xiaomi/mi439/device.mk)
 
 # Inherit from common AOSP configuration
-$(call inherit-product, vendor/aosp/config/common_full_phone.mk)
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-PRODUCT_NAME := aosp_mi439
+#Rising flags
+RISING_DEVICE := mi439
+RISING_MAINTAINER := rxuglr
+TARGET_USE_PIXEL_FINGERPRINT := true
+
+# Device identifier
+PRODUCT_NAME := lineage_mi439
 PRODUCT_DEVICE := mi439
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI SDM439
 PRODUCT_MANUFACTURER := Xiaomi
 
-# Boot animation resolution.
-TARGET_BOOT_ANIMATION_RES := 720
+# Blur
+TARGET_ENABLE_BLUR := true
+
+# Face Unlock
+TARGET_FACE_UNLOCK_SUPPORTED := true
+
+# Exclude AudioFx from build
+TARGET_EXCLUDES_AUDIOFX := true
+
+#Gapps
+WITH_GMS := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_CORE_GMS := true
+TARGET_CORE_GMS_EXTRAS := true
+$(call inherit-product-if-exists, vendor/gms/produtcs/gms.mk)
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
