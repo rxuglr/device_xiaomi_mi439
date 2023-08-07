@@ -157,9 +157,14 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
-# Health
+# Lineage Health
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
+
+# Health
+PRODUCT_PACKAGES += \
+    android.hardware.health@2.1-impl \
+    android.hardware.health@2.1-service
 
 # IMS
 PRODUCT_PACKAGES += \
