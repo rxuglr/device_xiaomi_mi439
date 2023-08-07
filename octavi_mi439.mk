@@ -19,16 +19,15 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from mi439 device configuration.
 $(call inherit-product, device/xiaomi/mi439/device.mk)
 
-# Inherit from common AOSP configuration
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit from common Octavi configuration
+$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
 
-#Rising flags
-RISING_DEVICE := mi439
-RISING_MAINTAINER := rxuglr
-TARGET_USE_PIXEL_FINGERPRINT := true
+# Octavi
+OCTAVI_BUILD := mi439
+OCTAVI_MAINTAINER := rxuglr
 
 # Device identifier
-PRODUCT_NAME := lineage_mi439
+PRODUCT_NAME := octavi_mi439
 PRODUCT_DEVICE := mi439
 PRODUCT_BRAND := Xiaomi
 PRODUCT_MODEL := MI SDM439
@@ -43,12 +42,9 @@ TARGET_FACE_UNLOCK_SUPPORTED := true
 # Exclude AudioFx from build
 TARGET_EXCLUDES_AUDIOFX := true
 
-#Gapps
-WITH_GMS := true
-TARGET_USE_GOOGLE_TELEPHONY := true
-TARGET_CORE_GMS := true
-TARGET_CORE_GMS_EXTRAS := true
-$(call inherit-product-if-exists, vendor/gms/produtcs/gms.mk)
+# Gapps
+USE_GAPPS := true
+WITH_GAPPS := true
 
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
