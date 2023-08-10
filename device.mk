@@ -19,8 +19,9 @@ TARGET_KERNEL_VERSION := 4.9
 PRODUCT_PACKAGES += \
     com.dsi.ant@1.0.vendor
 
-# Enable updating of APEXes
-$(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
+# APEX
+OVERRIDE_TARGET_FLATTEN_APEX := true
+OVERRIDE_PRODUCT_COMPRESSED_APEX := false
 
 # Audio
 PRODUCT_PACKAGES += \
