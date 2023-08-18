@@ -157,10 +157,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor
 
-# Lineage Health
-PRODUCT_PACKAGES += \
-    vendor.lineage.health-service.default
-
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
@@ -383,10 +379,6 @@ ifneq ($(TARGET_KERNEL_VERSION),4.19)
 PRODUCT_PACKAGES += \
     android.hardware.thermal@2.0-service.qti.xiaomi_sdm439
 endif
-
-# Trust HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.trust@1.0-service
 
 # USB HAL
 PRODUCT_PACKAGES += \
