@@ -26,7 +26,7 @@ $(call inherit-product, vendor/droidx/config/common_full_phone.mk)
 DROIDX_BUILD_TYPE := OFFICIAL
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 ro.droidx.maintainer=rxuglr
-#DROIDX_GAPPS := true
+DROIDX_GAPPS := true
 
 # Device identifier
 PRODUCT_NAME := droidx_mi439
